@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio profesional de [Tu Nombre] - Desarrollador Web">
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar container">
+      <a href="#inicio" class="logo">Tu<span>Nombre</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio" class="active">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+        <p class="hero-subtitle">Hola, mi nombre es</p>
+        <h1 class="hero-title">[Samuel Elias Alejandro Estrada Marroquin].</h1>
+        <h2 class="hero-subtitle2" id="typewriter"></h2>
+        <p class="hero-description">
+          Soy un desarrollador web apasionado por crear experiencias digitales únicas.
+          Me especializo en HTML5, CSS3 y JavaScript.
+        </p>
+        <div class="hero-buttons">
+          <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+          <a href="#contacto" class="btn btn-outline">Contáctame</a>
+        </div>
+        <div class="hero-social">
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Correo"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="sobre-mi">
+      <div class="container">
+        <h2 class="section-title">Sobre <span>mí</span></h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Soy un desarrollador web con experiencia en la creación de interfaces
+              modernas y funcionales. Me apasiona la tecnología y el diseño, buscando
+              siempre la mejor experiencia de usuario.
+            </p>
+            <p>
+              Actualmente me encuentro en constante aprendizaje, explorando nuevas
+              tecnologías y mejores prácticas del desarrollo web.
+            </p>
+            <div class="about-info">
+              <div class="info-item">
+                <span class="info-label">Nombre:</span>
+                <span class="info-value">[Tu Nombre]</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Email:</span>
+                <span class="info-value">tu@email.com</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Ubicación:</span>
+                <span class="info-value">[Tu Ciudad], [Tu País]</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Disponibilidad:</span>
+                <span class="info-value">Freelance</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <h3><span data-count="2">0</span>+</h3>
+              <p>Años de experiencia</p>
+            </div>
+            <div class="stat">
+              <h3><span data-count="30">0</span>+</h3>
+              <p>Proyectos completados</p>
+            </div>
+            <div class="stat">
+              <h3><span data-count="100">0</span>%</h3>
+              <p>Compromiso</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills section" id="habilidades">
+      <div class="container">
+        <h2 class="section-title">Mis <span>habilidades</span></h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+            <h3>HTML5</h3>
+            <div class="progress-bar">
+              <div class="progress" data-progress="90%">90%</div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+            <h3>CSS3</h3>
+            <div class="progress-bar">
+              <div class="progress" data-progress="85%">85%</div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fab fa-js"></i></div>
+            <h3>JavaScript</h3>
+            <div class="progress-bar">
+              <div class="progress" data-progress="80%">80%</div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fab fa-react"></i></div>
+            <h3>React</h3>
+            <div class="progress-bar">
+              <div class="progress" data-progress="70%">70%</div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+            <h3>Node.js</h3>
+            <div class="progress-bar">
+              <div class="progress" data-progress="65%">65%</div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fas fa-database"></i></div>
+            <h3>SQL</h3>
+            <div class="progress-bar">
+              <div class="progress" data-progress="60%">60%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects section" id="proyectos">
+      <div class="container">
+        <h2 class="section-title">Mis <span>proyectos</span></h2>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="app">App</button>
+          <button class="filter-btn" data-filter="diseño">Diseño</button>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <img src="https://via.placeholder.com/400x250/6366f1/ffffff?text=Proyecto+Web" alt="Proyecto Web">
+              <div class="project-overlay">
+                <div class="overlay-links">
+                  <a href="#" aria-label="Ver código"><i class="fab fa-github"></i></a>
+                  <a href="#" aria-label="Ver demo"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Proyecto Web</h3>
+              <p>Descripción breve del proyecto y las tecnologías utilizadas.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JS</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="app">
+            <div class="project-image">
+              <img src="https://via.placeholder.com/400x250/10b981/ffffff?text=App+Móvil" alt="App Móvil">
+              <div class="project-overlay">
+                <div class="overlay-links">
+                  <a href="#" aria-label="Ver código"><i class="fab fa-github"></i></a>
+                  <a href="#" aria-label="Ver demo"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>App Móvil</h3>
+              <p>Descripción breve del proyecto y las tecnologías utilizadas.</p>
+              <div class="project-tags">
+                <span>React</span><span>Node</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="diseño">
+            <div class="project-image">
+              <img src="https://via.placeholder.com/400x250/ef4444/ffffff?text=Diseño+UI" alt="Diseño UI">
+              <div class="project-overlay">
+                <div class="overlay-links">
+                  <a href="#" aria-label="Ver código"><i class="fab fa-github"></i></a>
+                  <a href="#" aria-label="Ver demo"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Diseño UI</h3>
+              <p>Descripción breve del proyecto y las tecnologías utilizadas.</p>
+              <div class="project-tags">
+                <span>Figma</span><span>CSS</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <img src="https://via.placeholder.com/400x250/f59e0b/ffffff?text=E-commerce" alt="E-commerce">
+              <div class="project-overlay">
+                <div class="overlay-links">
+                  <a href="#" aria-label="Ver código"><i class="fab fa-github"></i></a>
+                  <a href="#" aria-label="Ver demo"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>E-commerce</h3>
+              <p>Descripción breve del proyecto y las tecnologías utilizadas.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contacto">
+      <div class="container">
+        <h2 class="section-title">Contáctame</h2>
+        <p class="contact-subtitle">¿Tienes un proyecto en mente? Hablemos sobre ello.</p>
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <input type="text" id="nombre" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Tu email" required>
+          </div>
+          <div class="form-group">
+            <textarea id="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+          <p class="form-message" id="form-message"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 <span>[Tu Nombre]</span>. Todos los derechos reservados.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Volver arriba">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
