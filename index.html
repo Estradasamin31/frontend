@@ -3,17 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portafolio profesional de [Tu Nombre] - Desarrollador Web">
+  <meta name="description" content="Portafolio profesional de Samuel Estrada - Desarrollador Web">
   <title>Mi Portafolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      var theme = localStorage.getItem('theme');
+      if (!theme && window.matchMedia('(prefers-color-scheme: light)').matches) theme = 'light';
+      if (theme) document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
 </head>
 <body>
   <header class="header">
     <nav class="navbar container">
-      <a href="#inicio" class="logo">Tu<span>Nombre</span></a>
+      <a href="#inicio" class="logo">Samuel<span>Estrada</span></a>
       <ul class="nav-links" id="nav-links">
         <li><a href="#inicio" class="active">Inicio</a></li>
         <li><a href="#sobre-mi">Sobre mí</a></li>
@@ -21,6 +28,9 @@
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar entre modo claro y oscuro">
+        <i class="fas fa-sun"></i>
+      </button>
       <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
@@ -32,22 +42,47 @@
   <main>
     <section class="hero" id="inicio">
       <div class="container hero-content">
-        <p class="hero-subtitle">Hola, mi nombre es</p>
-        <h1 class="hero-title">Estrada Marroquin, Samuel Elias Alejandro.</h1>
-        <h2 class="hero-subtitle2" id="typewriter"></h2>
-        <p class="hero-description">
-          Soy un desarrollador web apasionado por crear experiencias digitales únicas.
-          Me especializo en HTML5, CSS3 y JavaScript.
-        </p>
-        <div class="hero-buttons">
-          <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
-          <a href="#contacto" class="btn btn-outline">Contáctame</a>
+        <div class="hero-grid">
+          <div class="hero-text">
+            <p class="hero-subtitle">Hola, mi nombre es</p>
+            <h1 class="hero-title">Estrada Marroquin, Samuel Elias Alejandro.</h1>
+            <h2 class="hero-subtitle2" id="typewriter"></h2>
+            <p class="hero-description">
+              Soy un desarrollador web apasionado por crear experiencias digitales únicas.
+              Me especializo en HTML5, CSS3 y JavaScript.
+            </p>
+            <div class="hero-buttons">
+              <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+              <a href="#contacto" class="btn btn-outline">Contáctame</a>
+            </div>
+            <div class="hero-social">
+              <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Correo"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="hero-profile">
+            <div class="profile-image-container">
+              <img src="foto-perfil.png"
+                   alt="Foto de perfil de Samuel Elias Alejandro Estrada Marroquin"
+                   onerror="this.onerror=null;this.src='data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27500%27 height=%27500%27 viewBox=%270 0 500 500%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%%27 stop-color=%27%236366f1%27/%3E%3Cstop offset=%27100%%27 stop-color=%27%2310b981%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27500%27 height=%27500%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2750%%27 y=%2750%%27 font-family=%27Arial,sans-serif%27 font-size=%27160%27 fill=%27%23ffffff%27 text-anchor=%27middle%27 dominant-baseline=%27central%27 font-weight=%27bold%27%3ESE%3C/text%3E%3C/svg%3E';">
+            </div>
+          </div>
         </div>
-        <div class="hero-social">
-          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" aria-label="Correo"><i class="fas fa-envelope"></i></a>
+        <div class="hero-skills" id="hero-skills">
+          <h3 class="hero-skills-title">Mis atributos y habilidades</h3>
+          <ul class="hero-attributes">
+            <li class="skill-chip"><i class="fab fa-html5"></i> HTML5</li>
+            <li class="skill-chip"><i class="fab fa-css3-alt"></i> CSS3</li>
+            <li class="skill-chip"><i class="fab fa-js"></i> JavaScript</li>
+            <li class="skill-chip"><i class="fab fa-react"></i> React</li>
+            <li class="skill-chip"><i class="fab fa-node-js"></i> Node.js</li>
+            <li class="skill-chip"><i class="fas fa-database"></i> SQL</li>
+            <li class="skill-chip"><i class="fas fa-lightbulb"></i> Creativo</li>
+            <li class="skill-chip"><i class="fas fa-users"></i> Trabajo en equipo</li>
+            <li class="skill-chip"><i class="fas fa-graduation-cap"></i> Aprendizaje continuo</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -58,26 +93,35 @@
         <div class="about-content">
           <div class="about-text">
             <p>
-              Soy un desarrollador web con experiencia en la creación de interfaces
-              modernas y funcionales. Me apasiona la tecnología y el diseño, buscando
-              siempre la mejor experiencia de usuario.
+              ¡Hola! Soy Samuel, un desarrollador web afincado en Lima, Perú, que
+              convierte ideas en experiencias digitales simples y memorables. Me muevo
+              con la misma comodidad entre la lógica del código y el detalle visual
+              del diseño, con un objetivo claro: que cada clic se sienta natural y
+              cada página cuente una historia.
             </p>
             <p>
-              Actualmente me encuentro en constante aprendizaje, explorando nuevas
-              tecnologías y mejores prácticas del desarrollo web.
+              Creo en el aprendizaje constante como motor de un buen trabajo: cada
+              proyecto me reta a explorar nuevas tecnologías y a afinar mejores
+              prácticas, sin perder de vista lo más importante: las personas que
+              usan lo que construyo. Si buscas a alguien entregado, cercano y con
+              ganas de crear cosas útiles, hablemos.
             </p>
             <div class="about-info">
               <div class="info-item">
                 <span class="info-label">Nombre:</span>
-                <span class="info-value">[Tu Nombre]</span>
+                <span class="info-value">Samuel Elias Alejandro Estrada Marroquin</span>
               </div>
               <div class="info-item">
                 <span class="info-label">Email:</span>
-                <span class="info-value">tu@email.com</span>
+                <span class="info-value">estradasamin31@autonoma.edu.pe</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Teléfono:</span>
+                <span class="info-value">933347475</span>
               </div>
               <div class="info-item">
                 <span class="info-label">Ubicación:</span>
-                <span class="info-value">[Tu Ciudad], [Tu País]</span>
+                <span class="info-value">Lima, Perú</span>
               </div>
               <div class="info-item">
                 <span class="info-label">Disponibilidad:</span>
@@ -165,7 +209,7 @@
         <div class="projects-grid">
           <div class="project-card" data-category="web">
             <div class="project-image">
-              <img src="https://via.placeholder.com/400x250/6366f1/ffffff?text=Proyecto+Web" alt="Proyecto Web">
+              <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'400'%20height%3D'250'%20viewBox%3D'0%200%20400%20250'%3E%3Cdefs%3E%3ClinearGradient%20id%3D'g'%20x1%3D'0'%20y1%3D'0'%20x2%3D'1'%20y2%3D'1'%3E%3Cstop%20offset%3D'0%25'%20stop-color%3D'%236366f1'%2F%3E%3Cstop%20offset%3D'100%25'%20stop-color%3D'%2310b981'%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D'400'%20height%3D'250'%20fill%3D'url(%23g)'%2F%3E%3Cpath%20d%3D'M170%20100%20L115%20145%20L170%20190'%20stroke%3D'%23ffffff'%20stroke-width%3D'11'%20fill%3D'none'%20stroke-linecap%3D'round'%20stroke-linejoin%3D'round'%2F%3E%3Cpath%20d%3D'M230%20100%20L285%20145%20L230%20190'%20stroke%3D'%23ffffff'%20stroke-width%3D'11'%20fill%3D'none'%20stroke-linecap%3D'round'%20stroke-linejoin%3D'round'%2F%3E%3Cpath%20d%3D'M212%2092%20L188%20198'%20stroke%3D'%23ffffff'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'220'%20font-family%3D'Arial%2Csans-serif'%20font-size%3D'24'%20fill%3D'%23ffffff'%20text-anchor%3D'middle'%20font-weight%3D'bold'%3EProyecto%20Web%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Proyecto Web">
               <div class="project-overlay">
                 <div class="overlay-links">
                   <a href="#" aria-label="Ver código"><i class="fab fa-github"></i></a>
@@ -175,7 +219,7 @@
             </div>
             <div class="project-info">
               <h3>Proyecto Web</h3>
-              <p>Descripción breve del proyecto y las tecnologías utilizadas.</p>
+              <p>Páginas web modernas y responsivas centradas en una experiencia de usuario clara y atractiva.</p>
               <div class="project-tags">
                 <span>HTML</span><span>CSS</span><span>JS</span>
               </div>
@@ -183,7 +227,7 @@
           </div>
           <div class="project-card" data-category="app">
             <div class="project-image">
-              <img src="https://via.placeholder.com/400x250/10b981/ffffff?text=App+Móvil" alt="App Móvil">
+              <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'400'%20height%3D'250'%20viewBox%3D'0%200%20400%20250'%3E%3Cdefs%3E%3ClinearGradient%20id%3D'g'%20x1%3D'0'%20y1%3D'0'%20x2%3D'1'%20y2%3D'1'%3E%3Cstop%20offset%3D'0%25'%20stop-color%3D'%2310b981'%2F%3E%3Cstop%20offset%3D'100%25'%20stop-color%3D'%230d9488'%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D'400'%20height%3D'250'%20fill%3D'url(%23g)'%2F%3E%3Crect%20x%3D'182'%20y%3D'62'%20width%3D'36'%20height%3D'105'%20rx%3D'7'%20fill%3D'none'%20stroke%3D'%23ffffff'%20stroke-width%3D'9'%2F%3E%3Cline%20x1%3D'200'%20y1%3D'152'%20x2%3D'200'%20y2%3D'160'%20stroke%3D'%23ffffff'%20stroke-width%3D'8'%20stroke-linecap%3D'round'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'220'%20font-family%3D'Arial%2Csans-serif'%20font-size%3D'24'%20fill%3D'%23ffffff'%20text-anchor%3D'middle'%20font-weight%3D'bold'%3EApp%20Movil%3C%2Ftext%3E%3C%2Fsvg%3E" alt="App Móvil">
               <div class="project-overlay">
                 <div class="overlay-links">
                   <a href="#" aria-label="Ver código"><i class="fab fa-github"></i></a>
@@ -193,7 +237,7 @@
             </div>
             <div class="project-info">
               <h3>App Móvil</h3>
-              <p>Descripción breve del proyecto y las tecnologías utilizadas.</p>
+              <p>Aplicaciones móviles con interfaces intuitivas y datos en tiempo real.</p>
               <div class="project-tags">
                 <span>React</span><span>Node</span>
               </div>
@@ -201,7 +245,7 @@
           </div>
           <div class="project-card" data-category="diseño">
             <div class="project-image">
-              <img src="https://via.placeholder.com/400x250/ef4444/ffffff?text=Diseño+UI" alt="Diseño UI">
+              <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'400'%20height%3D'250'%20viewBox%3D'0%200%20400%20250'%3E%3Cdefs%3E%3ClinearGradient%20id%3D'g'%20x1%3D'0'%20y1%3D'0'%20x2%3D'1'%20y2%3D'1'%3E%3Cstop%20offset%3D'0%25'%20stop-color%3D'%23ef4444'%2F%3E%3Cstop%20offset%3D'100%25'%20stop-color%3D'%23f59e0b'%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D'400'%20height%3D'250'%20fill%3D'url(%23g)'%2F%3E%3Crect%20x%3D'150'%20y%3D'92'%20width%3D'100'%20height%3D'46'%20rx%3D'6'%20fill%3D'none'%20stroke%3D'%23ffffff'%20stroke-width%3D'9'%2F%3E%3Crect%20x%3D'150'%20y%3D'120'%20width%3D'100'%20height%3D'46'%20rx%3D'6'%20fill%3D'none'%20stroke%3D'%23ffffff'%20stroke-width%3D'9'%20opacity%3D'0.7'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'220'%20font-family%3D'Arial%2Csans-serif'%20font-size%3D'24'%20fill%3D'%23ffffff'%20text-anchor%3D'middle'%20font-weight%3D'bold'%3EDise%C3%B1o%20UI%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Diseño UI">
               <div class="project-overlay">
                 <div class="overlay-links">
                   <a href="#" aria-label="Ver código"><i class="fab fa-github"></i></a>
@@ -211,7 +255,7 @@
             </div>
             <div class="project-info">
               <h3>Diseño UI</h3>
-              <p>Descripción breve del proyecto y las tecnologías utilizadas.</p>
+              <p>Interfaces modernas y accesibles que convierten ideas en productos fáciles de usar.</p>
               <div class="project-tags">
                 <span>Figma</span><span>CSS</span>
               </div>
@@ -219,7 +263,7 @@
           </div>
           <div class="project-card" data-category="web">
             <div class="project-image">
-              <img src="https://via.placeholder.com/400x250/f59e0b/ffffff?text=E-commerce" alt="E-commerce">
+              <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'400'%20height%3D'250'%20viewBox%3D'0%200%20400%20250'%3E%3Cdefs%3E%3ClinearGradient%20id%3D'g'%20x1%3D'0'%20y1%3D'0'%20x2%3D'1'%20y2%3D'1'%3E%3Cstop%20offset%3D'0%25'%20stop-color%3D'%23f59e0b'%2F%3E%3Cstop%20offset%3D'100%25'%20stop-color%3D'%23ef4444'%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D'400'%20height%3D'250'%20fill%3D'url(%23g)'%2F%3E%3Cpath%20d%3D'M140%20108%20h28%20l22%2058%20h62%20l18%20-40%20h-102'%20fill%3D'none'%20stroke%3D'%23ffffff'%20stroke-width%3D'9'%20stroke-linecap%3D'round'%20stroke-linejoin%3D'round'%2F%3E%3Ccircle%20cx%3D'185'%20cy%3D'186'%20r%3D'7'%20fill%3D'%23ffffff'%2F%3E%3Ccircle%20cx%3D'237'%20cy%3D'186'%20r%3D'7'%20fill%3D'%23ffffff'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'220'%20font-family%3D'Arial%2Csans-serif'%20font-size%3D'24'%20fill%3D'%23ffffff'%20text-anchor%3D'middle'%20font-weight%3D'bold'%3EE-commerce%3C%2Ftext%3E%3C%2Fsvg%3E" alt="E-commerce">
               <div class="project-overlay">
                 <div class="overlay-links">
                   <a href="#" aria-label="Ver código"><i class="fab fa-github"></i></a>
@@ -229,7 +273,7 @@
             </div>
             <div class="project-info">
               <h3>E-commerce</h3>
-              <p>Descripción breve del proyecto y las tecnologías utilizadas.</p>
+              <p>Tiendas en línea completas con catálogo, carrito de compras y pasarela de pagos.</p>
               <div class="project-tags">
                 <span>HTML</span><span>CSS</span><span>JS</span>
               </div>
@@ -262,7 +306,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 <span>[Tu Nombre]</span>. Todos los derechos reservados.</p>
+      <p>&copy; 2026 <span>Samuel Elias Alejandro Estrada Marroquin</span>. Todos los derechos reservados.</p>
       <div class="footer-social">
         <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>

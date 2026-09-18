@@ -1,3 +1,21 @@
+// ============ MODO CLARO / OSCURO ============
+const themeToggle = document.getElementById('theme-toggle');
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  themeToggle.innerHTML = theme === 'light'
+    ? '<i class="fas fa-moon"></i>'
+    : '<i class="fas fa-sun"></i>';
+}
+
+themeToggle.addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('data-theme');
+  applyTheme(current === 'light' ? 'dark' : 'light');
+  localStorage.setItem('theme', document.documentElement.getAttribute('data-theme'));
+});
+
+applyTheme(document.documentElement.getAttribute('data-theme') || 'dark');
+
 // ============ MENÚ HAMBURGUESA ============
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
@@ -263,8 +281,8 @@ const header = document.querySelector('.header');
 
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > 50) {
-    header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
+    header.classList.add('scrolled');
   } else {
-    header.style.boxShadow = 'none';
+    header.classList.remove('scrolled');
   }
 });
